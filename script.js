@@ -20,5 +20,4 @@ const rangeInput = range.querySelector('input')
 
 rangeInput.addEventListener('input', () => {
     range.querySelector('.range-marker').style.left = (+rangeInput.value / +rangeInput.max  * 90) + '%'
-    console.log((+rangeInput.value / +rangeInput.max  * 100))
 })
