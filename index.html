@@ -6,11 +6,40 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .range {
+            position: relative;
+        }
+        .range-marker {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            pointer-events: none;
+            width: 15px;
+            height: 17px;
+            background: blueviolet;
+        }
+        .range-body {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: white;
+            border: 1px solid blueviolet;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <div class="calculator" style="display: flex; flex-direction: column; gap: 10px; align-items: start">
         <input type="text" data-field="square" class="control square">
-        <input type="range" min="0" max="10" class="control square2">
+        <div class="range">
+            <input type="range" min="0" max="10" class="control square2" value="0">
+            <span class="range-body"></span>
+            <span class="range-marker"></span>
+        </div>
         <select class="control type">
             <option value="2">
                 Два

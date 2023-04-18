@@ -1,7 +1,7 @@
 const controls = document.querySelectorAll('.control')
 
 controls.forEach((item) => {
-    item.addEventListener('change', calculate)
+    item.addEventListener('input', calculate)
 })
 
 function calculate () {
@@ -10,7 +10,15 @@ function calculate () {
     const typeValue = document.querySelector('.control.type').value
     const serviceValue = document.querySelector('.control.service').value
 
-    const outputValue = (+typeValue + +serviceValue) * +squareValue
+    const outputValue = (+typeValue + +serviceValue + +square2Value) * +squareValue
 
     document.querySelector('.calculator .output').textContent = outputValue
 }
+
+const range = document.querySelector('.range')
+const rangeInput = range.querySelector('input')
+
+rangeInput.addEventListener('input', () => {
+    range.querySelector('.range-marker').style.left = (+rangeInput.value / +rangeInput.max  * 90) + '%'
+    console.log((+rangeInput.value / +rangeInput.max  * 100))
+})
