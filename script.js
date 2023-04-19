@@ -1,7 +1,11 @@
 const controls = document.querySelectorAll('.control')
-
+const dropdowns = document.querySelectorAll('.dropdown')
 controls.forEach((item) => {
     item.addEventListener('input', calculate)
+})
+
+dropdowns.forEach((item) => {
+    item.addEventListener('click', calculate)
 })
 
 function calculate () {

@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./dropdown.css">
     <title>Document</title>
     <style>
         .range {
@@ -40,24 +41,29 @@
             <span class="range-body"></span>
             <span class="range-marker"></span>
         </div>
-        <select class="control type">
-            <option value="2">
-                Два
-            </option>
-            <option value="3">
-                Три
-            </option>
-        </select>
-        <select class="control service">
-            <option value="2">
-                Два
-            </option>
-            <option value="3">
-                Три
-            </option>
-        </select>
+        <div class="form-group">
+            <div class="dropdown">
+                <button class="dropdown__button">Два</button>
+                <ul class="dropdown__list">
+                    <li class="dropdown__list-item" data-value="2">Два</li>
+                    <li class="dropdown__list-item" data-value="3">Три</li>
+                </ul>
+                <input type="text" name="select-category" value="2" class="dropdown__input-hidden control type" >
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="dropdown">
+                <button class="dropdown__button">Два</button>
+                <ul class="dropdown__list">
+                    <li class="dropdown__list-item" data-value="2">Два</li>
+                    <li class="dropdown__list-item" data-value="3">Три</li>
+                </ul>
+                <input type="text" name="select-category" value="2" class="dropdown__input-hidden control service" >
+            </div>
+        </div>
         <div class="output">0</div>
     </div>
+    <script src="dropdown.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
